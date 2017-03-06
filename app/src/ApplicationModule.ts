@@ -1,18 +1,16 @@
-/// <reference path="core/CoreModule.ts"/>
+/// <reference path="core\CoreModule.ts"/>
 
 module Sonovate {
 
     var modules = [
         "templates",
-        "ui.router",
-        "ngCookies",
-        'rx', 
+        "ui.router"
     ];
 
     // this array could be loaded dynamically in the future
-    var testModules = [
-
+    var sonovateModules = [
+        'sonovate.mainPage',
+        'sonovate.core'
     ];
-
-    angular.module("test", modules.concat(testModules));
+    angular.module("sonovate", modules.concat(sonovateModules));
 }

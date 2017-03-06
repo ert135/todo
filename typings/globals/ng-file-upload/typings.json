@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/351b4c7598c689337b8ce2c82543f902f8b30045/ng-file-upload/ng-file-upload.d.ts",
+    "raw": "registry:dt/ng-file-upload#0.0.0+20160928134715",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/351b4c7598c689337b8ce2c82543f902f8b30045/ng-file-upload/ng-file-upload.d.ts"
+  }
+}

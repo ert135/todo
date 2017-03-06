@@ -7,6 +7,7 @@
         notify      = require("gulp-notify"),
         plumber     = require("gulp-plumber"),
         ts          = require("gulp-typescript"),
+        yargs       = require('yargs').argv,
         gulpif      = require('gulp-if'),
         stripDebug = require('gulp-strip-debug');
 
@@ -24,21 +25,24 @@
                 target: "ES5",
                 out: "main.js"
             }))
+            .pipe(gulpif(yargs.clean, stripDebug()))
             .pipe(sourcemaps.write("/"))
-            .pipe(gulp.dest("app/build"))
+            .pipe(gulp.dest("app/build/application"))
             .pipe(livereload());
     });
 
     function buildPlumber() { 
         return plumber({
             errorHandler: function(err) {
+                notify.onError("TS Error: \n" + err.message)(err);
                 this.emit("end");
             }
         });
     }
 
     gulp.task('watch:ts', ['build:ts'], function () {
-        var watcher = gulp.watch("app/**/*.ts", ['build:ts']);
+        var watcher = gulp.watch("app/src/**/*.ts", ['build:ts']);
+
         livereload.listen();
     });
 

@@ -1,3 +1,3 @@
-module Test.Core {
-    angular.module("test.core", ["ngSanitize"]);
+module Sonovate.Core {
+    angular.module("sonovate.core", []);
 }
