@@ -1,3 +1,3 @@
-module Sonovate.MainPage {
-    angular.module("sonovate.mainPage", []);
+module MainPage {
+    angular.module("main-page", []);
 }

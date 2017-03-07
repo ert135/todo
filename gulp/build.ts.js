@@ -34,7 +34,6 @@
     function buildPlumber() { 
         return plumber({
             errorHandler: function(err) {
-                notify.onError("TS Error: \n" + err.message)(err);
                 this.emit("end");
             }
         });

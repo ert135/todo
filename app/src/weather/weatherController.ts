@@ -1,7 +1,8 @@
 ///<reference path="../sonovate.d.ts"/>
-module MainPage {
+
+module Weather {
     
-    class MainPageController extends Core.BaseController {
+    class WeatherController extends Core.BaseController {
         
         static $inject = [
             "$scope",
@@ -17,5 +18,5 @@ module MainPage {
     
     }
 
-    angular.module("main-page").controller("MainPageController", MainPageController);
+    angular.module("weather").controller("weatherController", WeatherController);
 }

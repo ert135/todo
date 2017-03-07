@@ -1,16 +1,17 @@
-/// <reference path="core\CoreModule.ts"/>
+/// <reference path="sonovate.d.ts"/>
 
+'use strict';
 module Sonovate {
-
-    var modules = [
+    angular.module("sonovate", [
         "templates",
-        "ui.router"
-    ];
+        "ui.router",
+        "core",
+        'main-page',
+        "weather"
+    ]);
 
-    // this array could be loaded dynamically in the future
-    var sonovateModules = [
-        'sonovate.mainPage',
-        'sonovate.core'
-    ];
-    angular.module("sonovate", modules.concat(sonovateModules));
+    //go to home view by default
+    angular.module("sonovate").config(function($stateProvider, $urlRouterProvider){
+        $urlRouterProvider.otherwise('/home');
+    })
 }

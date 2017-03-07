@@ -4,10 +4,6 @@ var requireDir  = require("require-dir"),
     gulp        = require("gulp"),
     tasks       = requireDir("gulp");
 
-/**
-* To do:
-* cache busting solution
-**/
 
 gulp.task("build", [
     "build:css",

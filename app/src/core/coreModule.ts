@@ -1,3 +1,3 @@
-module Sonovate.Core {
-    angular.module("sonovate.core", []);
+module Core {
+    angular.module("core", []);
 }
