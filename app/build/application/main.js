@@ -105,6 +105,24 @@ var Core;
     angular.module("core", []);
 })(Core || (Core = {}));
 ///<reference path="../sonovate.d.ts"/>
+var MainPage;
+(function (MainPage) {
+    var MainPageRoutes = (function () {
+        function MainPageRoutes($stateProvider) {
+            this.$stateProvider = $stateProvider;
+            this.$stateProvider
+                .state("MainPage", {
+                url: "/home",
+                templateUrl: "mainPage/mainPage.html",
+                controller: "MainPageController as vm",
+            });
+        }
+        return MainPageRoutes;
+    }());
+    MainPageRoutes.$inject = ["$stateProvider"];
+    angular.module("main-page").config(MainPageRoutes);
+})(MainPage || (MainPage = {}));
+///<reference path="../sonovate.d.ts"/>
 var Weather;
 (function (Weather) {
     var WeatherController = (function (_super) {
@@ -141,24 +159,6 @@ var Weather;
     WeatherRoutes.$inject = ["$stateProvider"];
     angular.module("weather").config(WeatherRoutes);
 })(Weather || (Weather = {}));
-///<reference path="../sonovate.d.ts"/>
-var MainPage;
-(function (MainPage) {
-    var MainPageRoutes = (function () {
-        function MainPageRoutes($stateProvider) {
-            this.$stateProvider = $stateProvider;
-            this.$stateProvider
-                .state("MainPage", {
-                url: "/home",
-                templateUrl: "mainPage/mainPage.html",
-                controller: "MainPageController as vm",
-            });
-        }
-        return MainPageRoutes;
-    }());
-    MainPageRoutes.$inject = ["$stateProvider"];
-    angular.module("main-page").config(MainPageRoutes);
-})(MainPage || (MainPage = {}));
 /// <reference path="../../../sonovate.d.ts" />
 var Core;
 (function (Core) {
