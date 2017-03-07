@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/d90aaaf4a0604a89ea195194714027aaeb49ed53/hellosign-embedded/hellosign-embedded.d.ts",
+    "raw": "registry:dt/hellosign-embedded#0.0.0+20160807204013",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/d90aaaf4a0604a89ea195194714027aaeb49ed53/hellosign-embedded/hellosign-embedded.d.ts"
+  }
+}
