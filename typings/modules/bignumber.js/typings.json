@@ -5,6 +5,8 @@
     "raw": "registry:npm/bignumber.js#2.4.0+20160714211320",
     "main": "bignumber.d.ts",
     "version": "^2.4.0",
-    "name": "bignumber.js"
+    "global": false,
+    "name": "bignumber.js",
+    "type": "typings"
   }
 }
